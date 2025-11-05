@@ -42,20 +42,29 @@ int main()
 
     printf("\n");
 
+    /*MEMCPY*/
 
     int array [] = { 54, 85, 20, 63, 21 };
     int * copy = NULL;
     int length = sizeof( int ) * 5;
        
-    /* Memory allocation and copy */
     copy = (int *) malloc( length );
     ft_memcpy( copy, array, length );
-        
-    /* Display the copied values */
+    printf("memcpy(54, 85, 20, 63, 21) : ");
     for( length=0; length<5; length++ ) {
         printf( "%d ", copy[ length ] );
     }
     printf( "\n" );
         
     free( copy );
+
+    /*ft_strlcpy*/
+
+    char dest[] = "";
+    char src[]  = "test";
+    int res = ft_strlcpy(dest, src, 4);
+
+    printf("%s\n", dest);
+    printf("%d", res);
+
 }
