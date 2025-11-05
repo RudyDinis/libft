@@ -1,4 +1,7 @@
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -33,11 +36,26 @@ int main()
 
     printf("\n");
 
-    printf("strlen(\"\") : %d\n", ft_strlen(""));
-    printf("strlen(\"Test\") : %d\n", ft_strlen("Test"));
-    printf("strlen(\"\\n\") : %d\n", ft_strlen("\n"));
+    printf("strlen(\"\") : %ld\n", ft_strlen(""));
+    printf("strlen(\"Test\") : %ld\n", ft_strlen("Test"));
+    printf("strlen(\"\\n\") : %ld\n", ft_strlen("\n"));
 
     printf("\n");
 
-    
+
+    int array [] = { 54, 85, 20, 63, 21 };
+    int * copy = NULL;
+    int length = sizeof( int ) * 5;
+       
+    /* Memory allocation and copy */
+    copy = (int *) malloc( length );
+    ft_memcpy( copy, array, length );
+        
+    /* Display the copied values */
+    for( length=0; length<5; length++ ) {
+        printf( "%d ", copy[ length ] );
+    }
+    printf( "\n" );
+        
+    free( copy );
 }
