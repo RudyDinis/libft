@@ -64,7 +64,26 @@ int main()
     char src[]  = "test";
     int res = ft_strlcpy(dest, src, 4);
 
-    printf("%s\n", dest);
-    printf("%d", res);
+    printf("ft_strlcpy("", \"test\", 4) dest : %s, return : %d\n", dest, res);
+    printf("\n");
 
+
+    char dest1[6] = "test";
+    char src1[] = "42";
+    int res1 = ft_strlcat(dest1, src1, 6);
+
+    printf("ft_strlcat(\"test\", \"42\", 6) dest: %s, return: %d\n", dest1, res1);
+    printf("\n");
+
+    printf("ft_toupper('c') return: %c\n", ft_toupper('c'));
+    printf("ft_tolower('C') return: %c\n", ft_tolower('C'));
+
+    printf("\n");
+
+    //char destination[] = "valide";
+    //char *res2 = ft_strchr( destination, 'e' );
+
+    //printf("%s", res2);
+    printf("%d\n", ft_atoi("\n-120"));
+    printf("%d", atoi("\n-120"));
 }
