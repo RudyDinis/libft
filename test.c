@@ -80,14 +80,17 @@ int main()
 
     printf("\n");
 
-    //char destination[] = "valide";
-    //char *res2 = ft_strchr( destination, 'e' );
+    char destination[] = "valide";
+    char *res2 = ft_strchr( destination, 'e' );
 
-    //printf("%s", res2);
-    printf("%d\n", ft_atoi("\n120"));
-    printf("%d\n", ft_atoi("\n++120"));
-    printf("%d\n", ft_atoi("\n-120"));
-    printf("%d\n", ft_atoi("\n--120"));
+    printf("ft_strchr(\"valide\", e) : %s\n", res2);
+
+    printf("\n");
+
+    printf("ft_atoi(120) %d\n", ft_atoi("\n120"));
+    printf("ft_atoi(++120) %d\n", ft_atoi("\n++120"));
+    printf("ft_atoi(-120) %d\n", ft_atoi("\n-120"));
+    printf("ft_atoi(--120) %d\n", ft_atoi("\n--120"));
 
     printf("\n");
 
@@ -113,6 +116,39 @@ int main()
      
     printf("\n");
 
-    
+    printf( "%d %d\n", strncmp( "testv", "test", 5), ft_strncmp( "testv", "test", 5));
+    printf( "%d %d\n", strncmp( "toto", "james", strlen("james")), ft_strncmp( "toto", "james", strlen("james")));
+    printf( "%d %d\n", strncmp( "james bond", "james", strlen("james")), ft_strncmp( "james bond", "james", strlen("james")));
+
+    printf("\n");
+
+    char destination1[] = "valide";
+    char *res3 = ft_strrchr( destination1, 'e' );
+
+    printf("ft_strrchr(\"valide\", e) : %s\n", res2);
+    printf("\n");
+
+    int i;
+    int * pointer = (int *) ft_calloc( 10, sizeof(int) );
+
+    assert( pointer != NULL );
+
+    for ( i=0; i<10-1; i++ ) {
+        pointer[i] = i;
+    }
+
+    printf("ft_calloc: ");
+    for (i=0; i<10; i++ ) {
+        printf( "%d ", pointer[i] );
+    }
+    printf( "\n" );
+
+    free( pointer );
+
+    char *string = "this is a copy";
+    char *newstr;
+    if ((newstr = ft_strdup(string)) != NULL)
+        printf("The new string is: %s\n", newstr);
+    return 0;
 }
 
