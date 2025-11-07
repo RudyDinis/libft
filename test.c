@@ -84,6 +84,27 @@ int main()
     //char *res2 = ft_strchr( destination, 'e' );
 
     //printf("%s", res2);
+    printf("%d\n", ft_atoi("\n120"));
+    printf("%d\n", ft_atoi("\n++120"));
     printf("%d\n", ft_atoi("\n-120"));
-    printf("%d", atoi("\n-120"));
+    printf("%d\n", ft_atoi("\n--120"));
+
+    printf("\n");
+
+    printf("strnstr(\"test\", \"est\", 3) : %s\n", ft_strnstr("test", "est", 3));
+
+    printf("\n");
+
+    int array1 [] = { 54, 85, 20, 63, 21 };
+    int array2 [] = { 54, 85, 19, 63, 21 };
+    size_t size = sizeof( int ) * 5;
+
+    printf("memcmp :%d ft_memcmp :%d\n", memcmp( array1, array2, size), ft_memcmp( array1, array2, size));       
+    printf("memcmp :%d ft_memcmp :%d\n", memcmp( array1, array1, size), ft_memcmp( array1, array1, size));       
+    printf("memcmp :%d ft_memcmp :%d\n", memcmp( array2, array1, size), ft_memcmp( array2, array1, size));       
+    
+    printf("\n");
+
+    
 }
+

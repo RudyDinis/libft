@@ -13,14 +13,19 @@ int ft_atoi( const char * src )
     {
         indice++;
     }
-    if(src[indice] == '-' || src[indice] == '+')
-        signe *= src[indice] - 48;
-    printf("%d\n", 1*src[indice]);
+    while (src[indice] == '-' || src[indice] == '+')
+    {
+        if (src[indice] == '-')
+            signe = signe * -1;
+        if (src[indice + 1] == '-' || src[indice + 1] == '+')
+            return 0;
+        indice++;
+    }
     while (src[indice] >= '0' && src[indice] <= '9')
     {
         res *= 10;
         res += src[indice] - 48;
         indice++;
     }
-    return (res);
+    return (signe * res);
 }

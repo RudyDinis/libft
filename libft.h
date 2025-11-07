@@ -20,5 +20,7 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 //char * ft_strchr( const char * string, int searchedChar );
 int ft_atoi( const char * src );
+char * ft_strnstr(const char *big, const char *little, size_t len);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
