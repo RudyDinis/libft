@@ -105,6 +105,14 @@ int main()
     
     printf("\n");
 
+    char data[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+    const unsigned int size1 = 10;
+
+    printf("memchr :%s ft_memchr :%s\n",(char *) memchr(data, 57, size1), (char *)ft_memchr(data, 57, size1));       
+    printf("memchr :%s ft_memchr :%sd\n", (char *)memchr(data, 50, size1), (char *)ft_memchr(data, 50, size1));       
+     
+    printf("\n");
+
     
 }
 
