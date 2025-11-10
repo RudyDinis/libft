@@ -150,5 +150,7 @@ int main()
     if ((newstr = ft_strdup(string)) != NULL)
         printf("The new string is: %s\n", newstr);
     return 0;
+
+    
 }
 

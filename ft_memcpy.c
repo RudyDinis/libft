@@ -12,7 +12,5 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
         d[indice] = s[indice];
         indice++;
     }
-
-    printf("\n");
     return d;
 }

@@ -23,8 +23,7 @@ int ft_atoi( const char * src )
     }
     while (src[indice] >= '0' && src[indice] <= '9')
     {
-        res *= 10;
-        res += src[indice] - 48;
+        res = res * 10 + (src[indice] - 48);
         indice++;
     }
     return (signe * res);

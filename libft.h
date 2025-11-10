@@ -40,5 +40,5 @@ int ft_strncmp( const char * first, const char * second, size_t length );
 char * ft_strrchr( const char * string, int searchedChar );
 void * ft_calloc( size_t elementCount, size_t elementSize );
 char *ft_strdup(const char *string);
-
+//void	*ft_memmove(void *dest, const void *src, size_t n)
 #endif

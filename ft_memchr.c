@@ -7,10 +7,10 @@ void * ft_memchr( const void * memoryBlock, int searchedChar, size_t size )
 
     memory = (unsigned char *)memoryBlock;
     i = 0;
-    while (memory[i] && i <= size)
+    while (i <= size)
     {
-        if (memory[i] == searchedChar)
-            return ((char *)&memory[i]);
+        if (memory[i] == (unsigned char)searchedChar)
+            return ((void *)&memory[i]);
         i++;
     }
     return(NULL);

@@ -2,7 +2,7 @@
 
 void * ft_calloc( size_t elementCount, size_t elementSize )
 {
-    char *pointer;
+    unsigned char *pointer;
     size_t i;
 
     pointer = malloc(elementCount * elementSize);
@@ -10,10 +10,10 @@ void * ft_calloc( size_t elementCount, size_t elementSize )
     if (!pointer)
         return (NULL);
     i = 0;
-    while (i <= elementCount)
+    while (i < elementCount * elementSize)
     {
         pointer[i] = 0;
         i++;
     }
-    return ((void *)pointer);
+    return (pointer);
 }
