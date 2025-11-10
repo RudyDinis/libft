@@ -2,15 +2,13 @@
 
 char * ft_strchr( const char * string, int searchedChar )
 {
-    size_t indice;
-
-    indice = 0;
-    while(string[indice] != searchedChar)
-    {
-        indice++;
-    }
-    if (string[indice] == searchedChar)
-        return (char *)&string[indice];
-    else
-        return NULL;
+    while (*string)
+        {
+            if (*string == (char)searchedChar)
+                return ((char *)string);
+            string++;
+        }
+        if ((char)searchedChar == '\0')
+            return ((char *)string);
+        return (NULL);
 }

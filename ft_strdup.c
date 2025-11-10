@@ -14,5 +14,7 @@ char *ft_strdup(const char *string)
         dest[i] = string[i];
         i++;
     }
+
+    dest[i] = '\0';
     return (dest);
 }

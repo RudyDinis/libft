@@ -6,6 +6,8 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     unsigned char *s = (unsigned char*)src;
     size_t indice;
 
+    if (!dest && !src)
+        return NULL;
     indice = 0;
     while(indice < n)
     {
